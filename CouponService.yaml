@@ -1,15 +1,10 @@
 spring:
   application:
     name: CouponService # very important as it is the id of the service.
-  config:
+  config-server:
     # Notice the URL is removed! It just specifies the protocol now.
-    import: "optional:CONFIGSERVER:"
+    import-path: "optional:configserver:"
     # This tells the import to look up the Config Server in Eureka
-    cloud:
-      config:
-        discovery:
-          enabled: true
-          service-id: ConfigServer # Matches the application name of your Config Server
 server:
   port: 8081   # Each service must have unique port
 
