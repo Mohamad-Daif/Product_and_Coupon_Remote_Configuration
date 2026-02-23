@@ -1,13 +1,3 @@
-spring:
-  cloud:
-    config:
-      discovery:
-        enabled: true
-        service-id: configserver
-  config:
-    import: "optional:configserver:" # Remember to keep this lowercase!
-
-
 server:
   port: 8085
 
