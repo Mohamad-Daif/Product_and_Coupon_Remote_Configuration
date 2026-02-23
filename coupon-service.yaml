@@ -3,9 +3,13 @@ spring:
     config:
       discovery:
         enabled: true
-        service-id: ConfigServer
+        service-id: configserver
   config:
     import: "optional:configserver:" # Remember to keep this lowercase!
+
+
+server:
+  port: 8085
 
 eureka:
   client:
